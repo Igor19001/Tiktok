@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MyTok 🎬
 
-## Getting Started
+Prywatna platforma wideo — pełny klon TikToka dla jednej osoby.
 
-First, run the development server:
+## Pierwsze uruchomienie
+
+### 1. Zainstaluj zależności
+```bash
+npm install
+```
+
+### 2. Uruchom serwer deweloperski
+```bash
+npm run dev
+```
+
+### 3. Utwórz konto
+Otwórz http://localhost:3000/setup i utwórz swoje konto (tylko raz — przy pierwszym uruchomieniu).
+
+### 4. Zaloguj się i używaj!
+http://localhost:3000 → zaloguj się → przeglądaj, uploaduj i polub filmy.
+
+## Funkcje
+- 📱 Pionowy feed wideo (snap scroll, autoplay, loop)
+- ❤️ Like'i z animacją serduszka (podwójne kliknięcie)
+- 💬 Komentarze (slide-up panel)
+- 📤 Upload wideo (drag & drop, max 200MB)
+- 🖼️ Automatyczne thumbnaily (FFmpeg, jeśli zainstalowany)
+- 👤 Profil z historią i polubieniami
+- 🔔 Powiadomienia (like'i, komentarze)
+- 🔒 Prywatne konto z logowaniem hasłem
+- 📲 PWA — można zainstalować na telefonie
+
+## Technologia
+- **Next.js 16** (App Router)
+- **Prisma 7** + SQLite
+- **NextAuth.js** (JWT sessions)
+- **better-sqlite3** (driver adapter)
+- **FFmpeg** (fluent-ffmpeg + ffmpeg-static)
+- **TailwindCSS**
+
+## Uruchamianie produkcyjne
 
 ```bash
 npm run dev
