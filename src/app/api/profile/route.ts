@@ -46,18 +46,18 @@ export async function GET() {
   return NextResponse.json({
     user,
     stats: { videos: videoCount, likes: likeCount },
-    videos: videos.map((v) => ({
+    videos: videos.map((v: typeof videos[number]) => ({
       ...v,
       likeCount: v.likes.length,
-      liked: v.likes.some((l) => l.userId === userId),
+      liked: v.likes.some((l: { userId: string }) => l.userId === userId),
       commentCount: v._count.comments,
       likes: undefined,
       _count: undefined,
     })),
-    likedVideos: likedVideos.map((l) => ({
+    likedVideos: likedVideos.map((l: typeof likedVideos[number]) => ({
       ...l.video,
       likeCount: l.video.likes.length,
-      liked: l.video.likes.some((lk) => lk.userId === userId),
+      liked: l.video.likes.some((lk: { userId: string }) => lk.userId === userId),
       commentCount: l.video._count.comments,
       likes: undefined,
       _count: undefined,
